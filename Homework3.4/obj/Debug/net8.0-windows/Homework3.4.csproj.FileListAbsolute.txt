@@ -18,3 +18,4 @@ C:\Users\misha\source\repos\Homework_Proffetional\Homework3.4\obj\Debug\net8.0-w
 C:\Users\misha\source\repos\Homework_Proffetional\Homework3.4\obj\Debug\net8.0-windows\Homework3.4.pdb
 C:\Users\misha\source\repos\Homework_Proffetional\Homework3.4\obj\Debug\net8.0-windows\Homework3.4.genruntimeconfig.cache
 C:\Users\misha\source\repos\Homework_Proffetional\Homework3.4\obj\Debug\net8.0-windows\ref\Homework3.4.dll
+C:\Users\misha\source\repos\Homework_Proffetional\Homework3.4\obj\Debug\net8.0-windows\Homework3.4.sourcelink.json

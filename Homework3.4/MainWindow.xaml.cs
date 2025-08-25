@@ -64,6 +64,8 @@ namespace Homework3._4
                 StreamReader userReader = new StreamReader(s);
                 string contents = userReader.ReadToEnd();
                 MessageBox.Show(contents, "Вміст файлу", MessageBoxButton.OK, MessageBoxImage.Information);
+                s.Close();
+                userReader.Close();
             }
         }
     }
