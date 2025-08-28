@@ -1,0 +1,15 @@
+C:\Users\misha\source\repos\Homework_Proffetional\Homework7.5\bin\Debug\net8.0\Homework7.5.exe
+C:\Users\misha\source\repos\Homework_Proffetional\Homework7.5\bin\Debug\net8.0\Homework7.5.deps.json
+C:\Users\misha\source\repos\Homework_Proffetional\Homework7.5\bin\Debug\net8.0\Homework7.5.runtimeconfig.json
+C:\Users\misha\source\repos\Homework_Proffetional\Homework7.5\bin\Debug\net8.0\Homework7.5.dll
+C:\Users\misha\source\repos\Homework_Proffetional\Homework7.5\bin\Debug\net8.0\Homework7.5.pdb
+C:\Users\misha\source\repos\Homework_Proffetional\Homework7.5\obj\Debug\net8.0\Homework7.5.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\misha\source\repos\Homework_Proffetional\Homework7.5\obj\Debug\net8.0\Homework7.5.AssemblyInfoInputs.cache
+C:\Users\misha\source\repos\Homework_Proffetional\Homework7.5\obj\Debug\net8.0\Homework7.5.AssemblyInfo.cs
+C:\Users\misha\source\repos\Homework_Proffetional\Homework7.5\obj\Debug\net8.0\Homework7.5.csproj.CoreCompileInputs.cache
+C:\Users\misha\source\repos\Homework_Proffetional\Homework7.5\obj\Debug\net8.0\Homework7.5.sourcelink.json
+C:\Users\misha\source\repos\Homework_Proffetional\Homework7.5\obj\Debug\net8.0\Homework7.5.dll
+C:\Users\misha\source\repos\Homework_Proffetional\Homework7.5\obj\Debug\net8.0\refint\Homework7.5.dll
+C:\Users\misha\source\repos\Homework_Proffetional\Homework7.5\obj\Debug\net8.0\Homework7.5.pdb
+C:\Users\misha\source\repos\Homework_Proffetional\Homework7.5\obj\Debug\net8.0\Homework7.5.genruntimeconfig.cache
+C:\Users\misha\source\repos\Homework_Proffetional\Homework7.5\obj\Debug\net8.0\ref\Homework7.5.dll
