@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Homework6Task5Reflector/1.0.0": {
+        "runtime": {
+          "Homework6Task5Reflector.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Homework6Task5Reflector/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
