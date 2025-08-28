@@ -6,7 +6,6 @@ C:\Users\misha\source\repos\Homework_Proffetional\Homework6Task5Reflector\bin\De
 C:\Users\misha\source\repos\Homework_Proffetional\Homework6Task5Reflector\obj\Debug\net8.0-windows\MainWindow.g.cs
 C:\Users\misha\source\repos\Homework_Proffetional\Homework6Task5Reflector\obj\Debug\net8.0-windows\App.g.cs
 C:\Users\misha\source\repos\Homework_Proffetional\Homework6Task5Reflector\obj\Debug\net8.0-windows\Homework6Task5Reflector_MarkupCompile.cache
-C:\Users\misha\source\repos\Homework_Proffetional\Homework6Task5Reflector\obj\Debug\net8.0-windows\Homework6Task5Reflector_MarkupCompile.lref
 C:\Users\misha\source\repos\Homework_Proffetional\Homework6Task5Reflector\obj\Debug\net8.0-windows\MainWindow.baml
 C:\Users\misha\source\repos\Homework_Proffetional\Homework6Task5Reflector\obj\Debug\net8.0-windows\Homework6Task5Reflector.g.resources
 C:\Users\misha\source\repos\Homework_Proffetional\Homework6Task5Reflector\obj\Debug\net8.0-windows\Homework6Task5Reflector.GeneratedMSBuildEditorConfig.editorconfig

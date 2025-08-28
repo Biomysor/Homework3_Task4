@@ -1,23 +1,17 @@
 ﻿using Microsoft.Win32;
 using System.IO;
 using System.Reflection;
+using System.Text;
 using System.Windows;
 
 namespace Homework6Task5Reflector
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         private Assembly assembly;
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
-        {
         }
 
         private void OpenMenuItem_Click(object sender, RoutedEventArgs e)
@@ -30,7 +24,6 @@ namespace Homework6Task5Reflector
             if (openFileDialog.ShowDialog() == true)
             {
                 string path = openFileDialog.FileName;
-
                 try
                 {
                     assembly = Assembly.LoadFile(path);
@@ -43,42 +36,78 @@ namespace Homework6Task5Reflector
                     return;
                 }
 
-                textBlock.Text += $"СПИСОК ВСІХ ТИПІВ В ЗБІРЦІ: {assembly.FullName}"
-                                + Environment.NewLine + Environment.NewLine;
+                StringBuilder sb = new StringBuilder();
+
+                sb.AppendLine($"СПИСОК ВСІХ ТИПІВ В ЗБІРЦІ: {assembly.FullName}");
+                sb.AppendLine();
 
                 foreach (Type type in assembly.GetTypes())
                 {
-                    textBlock.Text += $"Тип: {type}" + Environment.NewLine;
+                    sb.AppendLine($"Тип: {type.FullName}");
 
-                    foreach (var method in type.GetMethods())
+                    foreach (var attr in type.GetCustomAttributes())
                     {
-                        string methStr = $"   Метод: {method.Name}" + Environment.NewLine;
-                        var methodBody = method.GetMethodBody();
-                        if (methodBody != null)
-                        {
-                            methStr += "   IL-код: ";
-                            foreach (var b in methodBody.GetILAsByteArray())
-                                methStr += b + ":";
-                        }
-                        textBlock.Text += methStr + Environment.NewLine;
+                        sb.AppendLine($"   Атрибут типу: [{attr.GetType().Name}]");
                     }
+
+                    if (chkMethods.IsChecked == true)
+                    {
+                        foreach (var method in type.GetMethods())
+                        {
+                            sb.AppendLine($"   Метод: {method.Name}");
+                            foreach (var attr in method.GetCustomAttributes())
+                            {
+                                sb.AppendLine($"      Атрибут: [{attr.GetType().Name}]");
+                            }
+                        }
+                    }
+
+                    if (chkProperties.IsChecked == true)
+                    {
+                        foreach (var prop in type.GetProperties())
+                        {
+                            sb.AppendLine($"   Властивість: {prop.Name}");
+                            foreach (var attr in prop.GetCustomAttributes())
+                            {
+                                sb.AppendLine($"      Атрибут: [{attr.GetType().Name}]");
+                            }
+                        }
+                    }
+
+                    if (chkFields.IsChecked == true)
+                    {
+                        foreach (var field in type.GetFields())
+                        {
+                            sb.AppendLine($"   Поле: {field.Name}");
+                            foreach (var attr in field.GetCustomAttributes())
+                            {
+                                sb.AppendLine($"      Атрибут: [{attr.GetType().Name}]");
+                            }
+                        }
+                    }
+
+                    if (chkEvents.IsChecked == true)
+                    {
+                        foreach (var ev in type.GetEvents())
+                        {
+                            sb.AppendLine($"   Подія: {ev.Name}");
+                            foreach (var attr in ev.GetCustomAttributes())
+                            {
+                                sb.AppendLine($"      Атрибут: [{attr.GetType().Name}]");
+                            }
+                        }
+                    }
+
+                    sb.AppendLine(new string('-', 40));
                 }
+
+                textBlock.Text = sb.ToString();
             }
         }
 
         private void ExitMenuItem_Click(object sender, RoutedEventArgs e)
         {
             Close();
-        }
-
-        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void textBlock_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
-        {
-
         }
     }
 }

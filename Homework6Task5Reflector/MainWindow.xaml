@@ -1,27 +1,28 @@
 ﻿<Window x:Class="Homework6Task5Reflector.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Homework6Task5Reflector"
-        mc:Ignorable="d"
-        Title="Task5" Height="450" Width="800">
-    <Grid>
-        <Menu DockPanel.Dock="Top" >
-            <MenuItem Header="_Файл" Height="33" Width="138" Margin="10" Background="LightGray">
-                <MenuItem Header="_Відкрити..." Click="OpenMenuItem_Click"/>
-                <Separator/>
-                <MenuItem Header="_Вихід" Click="ExitMenuItem_Click"/>
+        Title="Reflector" Height="600" Width="800">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Файл">
+                <MenuItem Header="Відкрити" Click="OpenMenuItem_Click"/>
+                <MenuItem Header="Вихід" Click="ExitMenuItem_Click"/>
             </MenuItem>
         </Menu>
 
-        <TextBox x:Name="textBlock" 
-                     TextWrapping="Wrap"
-                     FontFamily="Consolas"
-                     FontSize="14"
-                     AcceptsReturn="True"
-                     IsReadOnly="True"
-                     VerticalScrollBarVisibility="Auto"
-                     HorizontalScrollBarVisibility="Auto" TextChanged="textBlock_TextChanged" Margin="20,55,131,23"/>
-    </Grid>
+        <!-- Панель з чекбоксами -->
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Margin="5">
+            <CheckBox x:Name="chkMethods" Content="Методи" IsChecked="True" Margin="5"/>
+            <CheckBox x:Name="chkProperties" Content="Властивості" Margin="5"/>
+            <CheckBox x:Name="chkFields" Content="Поля" Margin="5"/>
+            <CheckBox x:Name="chkEvents" Content="Події" Margin="5"/>
+        </StackPanel>
+
+        <!-- Вікно для результатів -->
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <TextBox x:Name="textBlock" AcceptsReturn="True" TextWrapping="Wrap"
+                     VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"
+                     IsReadOnly="True"/>
+        </ScrollViewer>
+    </DockPanel>
 </Window>
